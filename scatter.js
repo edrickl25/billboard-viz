@@ -29,6 +29,8 @@ let yAxis;
 let xAxisGroup;
 let yAxisGroup;
 let colorScale;
+let tooltip;
+
 
 /* APPLICATION STATE */
 let state = {
@@ -113,6 +115,16 @@ svg = d3.select("#container")
     .attr("transform", `translate(${margin.left},${0})`)
     .call(yAxis)
 
+// add tooltip general def
+
+    tooltip = d3.select("body")
+    .append("div")
+    .attr("class","tooltip")
+    .style("z-index","10")
+    .style("position","absolute") 
+    .style("visibility","hidden")
+    .text("tooltip");
+
   draw(); // calls the draw function
 }
 
@@ -143,6 +155,18 @@ function draw() {
         .attr("cx", d => xScale(d.weeks_on_chart))
         //.attr("cy", d => yScale(d.envScore2020))
         .attr("fill", "#d248be"))
+        // add tooltip code for mouseover
+        .on("mouseover", function(event,d,i) {
+            return tooltip
+            .html(`<div>${d.artist} - ${d.song} <br>Debut Position:${d.debut_position} <br> Weeks on Chart: ${d.weeks_on_chart}<br> Peak Position: ${d.peak_position}</div>`)
+            .style("visibility","visible");
+        })
+        .on("mousemove", function(event) {
+            return tooltip.style("top",(event.pageY-10)+"px").style("left",(event.pageX+10)+"px");
+        })
+        .on("mouseout", function(){
+            return tooltip.style("visibility","hidden");
+        })
       ,
 
       // + HANDLE UPDATE SELECTION
