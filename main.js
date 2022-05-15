@@ -117,7 +117,8 @@ function init() {
   function draw() {
     // + FILTER DATA BASED ON STATE
     const filteredData = state.data
-    .filter(d => d.year === state.selection)
+    .filter(d => d.genre === state.selection)
+    console.log(filteredData);
   
   // UPDATE SCALE(S), if needed
 
