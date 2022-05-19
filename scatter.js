@@ -41,7 +41,7 @@ let state = {
 
 
 /* LOAD DATA */
-d3.csv("billboard.csv", d3.autoType).then(raw_data => {
+d3.csv("billboard_40.csv", d3.autoType).then(raw_data => {
   // + SET YOUR DATA PATH
   console.log("data", raw_data);
   // save our data to application state
@@ -183,3 +183,5 @@ function draw() {
         .remove()
     )
 }
+
+/* 5/17 - make a visual aid legend using the Rachel's meeting chat text (ben and gemma's viz), make another viz with subset of biggest songs probably in the form of bubbles organized by size, label axes, make tooltip rectangle background, FAQ type writing section, work in the line graph*/
