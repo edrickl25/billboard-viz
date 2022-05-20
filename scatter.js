@@ -164,7 +164,7 @@ function draw() {
         .attr("r", radius)
         .attr("cx", d => xScale(d.weeks_on_chart))
         //.attr("cy", d => yScale(d.envScore2020))
-        .attr("fill", "#d248be"))
+        .attr("fill", "#F46D25"))
         // add tooltip code for mouseover
         .on("mouseover", function(event,d,i) {
             return tooltip
