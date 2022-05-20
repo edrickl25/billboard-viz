@@ -30,6 +30,7 @@ let xAxisGroup;
 let yAxisGroup;
 let colorScale;
 let tooltip;
+let xTime;
 
 
 /* APPLICATION STATE */
@@ -76,11 +77,11 @@ function init() {
  selectElement.selectAll("option")
   .data([{key: "All", label:"All"}, 
         {key: "pop", label:"Pop"},
-        {key: "country", label:"Country"},
+        {key:"hip-hop", label:"Hip-Hop"},
         {key: "rock", label:"Rock"},
         {key: "alternative", label:"Alternative"},
         {key: "r&b", label:"R&B"},
-        {key:"hip-hop", label:"Hip-Hop"}])
+        {key: "country", label:"Country"}])
   .join("option")
   .attr("value", d => d.key)
   .text(d => d.label)
@@ -99,10 +100,10 @@ console.log(state.selectedGenre)
 
 
   // + CREATE SVG ELEMENT
-svg = d3.select("#container")
-  .append("svg")
-  .attr("width", width)
-  .attr("height", height)
+    svg = d3.select("#container")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
 
   // + CALL AXES
   xAxisGroup = svg.append("g")
@@ -114,6 +115,11 @@ svg = d3.select("#container")
     .attr("class", "yAxis")
     .attr("transform", `translate(${margin.left},${0})`)
     .call(yAxis)
+
+  xTime = d3.time.scale()
+    .range([0,width]);
+
+
 
 // add tooltip general def
 

@@ -9,23 +9,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@700&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
   </head>
+
+
   <body style="background-color: #F46D25">
     <section style="background-color: #4299de">
       <h2>Comparing Debut Positions and Longevity of the Songs from our Childhood</h2>
       <h3>Goal: I’m visualizing the Billboard Hot 100 data of the 2000s, while looking at the songs that maintained the most longevity and the average debut positions of the songs. I want to show what songs or trends were popular throughout the decade I grew up in, in terms of genre, artist, or style. My goal is to paint a picture of what the decade sounded like musically and if those sounds or trends might have changed over the years.</h3>
       <label for="dropdown">Genre</label>
       <select id="dropdown"></select>
-      <div id="container"></div>
+      <div id="container" class="containerclass">
+        <div class="legend">
+          <p>Higher dots = higher debuts / more instant virality <br>
+            Dots on the right = more longevity on the charts</p>
+        </div>
+      </div>
     </section>
-    <div style="background-color: #d248be;">
+
+
+    <section style="background-color: #d248be;" font-family="Verdana">
       <h3>Explanation of Billboard tracking</h3>
       <h4>Feb. 12, 2005: The Hot 100 begins incorporating digital sales data, reflecting the rise of iTunes, among other online retailers; the Digital Song Sales chart begins ranking the top-selling downloads of the week.</h4>
-      <h4>Recurrence is a chart policy implemented in 1991 with the advent of SoundScan in the Hot 100, where older songs charting for a certain amount of time are automatically kicked out the chart should they chart below or at a certain position. The logic behind this new rule coming in with the SoundScan policy changes is that because SoundScan accurately reflects how long a song lingers around in the market (during the survey era, DJs and retailers filling out surveys were more inclined to entirely remove songs that were deemed to be "on their way out", causing songs to fall fast off the charts), Billboard wanted to keep the Hot 100 fresh and constantly representing new, breakout talent. With this came the first Hot 100 recurrence rule: should a song be at least 20 weeks old and chart below #50, it will be removed from the charts.</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, leo ut consectetur sagittis, massa augue lobortis augue, vel tristique ligula risus quis dui. Praesent et sagittis enim, sed bibendum erat. Sed luctus volutpat massa at accumsan. Donec id consequat tellus. Fusce eleifend id velit sed pharetra. Mauris volutpat dolor sed convallis maximus. Duis sed metus eget risus laoreet convallis. Cras vel sodales arcu. Phasellus pharetra dui quis dictum rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum risus elit, congue mattis sapien ultrices et. Morbi iaculis, arcu et ultricies bibendum, est tellus interdum tortor, et aliquam leo arcu a lacus. Nulla eu euismod magna, at imperdiet odio. In blandit diam libero, ac finibus metus accumsan facilisis. Etiam mattis, magna nec pulvinar hendrerit, mauris libero eleifend dui, at elementum elit mauris sit amet diam. Phasellus facilisis quam vitae massa tincidunt, rhoncus volutpat magna convallis.
+      <h4>Why is there a huge trend of songs around 20 weeks?</h4>
+       <p>Recurrence is a chart policy implemented in 1991 with the advent of SoundScan in the Hot 100, where older songs charting for a certain amount of time are automatically kicked out the chart should they chart below or at a certain position. The logic behind this new rule coming in with the SoundScan policy changes is that because SoundScan accurately reflects how long a song lingers around in the market (during the survey era, DJs and retailers filling out surveys were more inclined to entirely remove songs that were deemed to be "on their way out", causing songs to fall fast off the charts), Billboard wanted to keep the Hot 100 fresh and constantly representing new, breakout talent. With this came the first Hot 100 recurrence rule: should a song be at least 20 weeks old and chart below #50, it will be removed from the charts.</p>
+    <h4></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, leo ut consectetur sagittis, massa augue lobortis augue, vel tristique ligula risus quis dui. Praesent et sagittis enim, sed bibendum erat. Sed luctus volutpat massa at accumsan. Donec id consequat tellus. Fusce eleifend id velit sed pharetra. Mauris volutpat dolor sed convallis maximus. Duis sed metus eget risus laoreet convallis. Cras vel sodales arcu. Phasellus pharetra dui quis dictum rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum risus elit, congue mattis sapien ultrices et. Morbi iaculis, arcu et ultricies bibendum, est tellus interdum tortor, et aliquam leo arcu a lacus. Nulla eu euismod magna, at imperdiet odio. In blandit diam libero, ac finibus metus accumsan facilisis. Etiam mattis, magna nec pulvinar hendrerit, mauris libero eleifend dui, at elementum elit mauris sit amet diam. Phasellus facilisis quam vitae massa tincidunt, rhoncus volutpat magna convallis.
 
-      Quisque mattis venenatis nisi, eget cursus nibh bibendum et. Nullam ornare ligula eget tellus iaculis, in euismod velit convallis. Praesent ornare, libero quis vehicula tincidunt, lorem tellus lacinia nisi, et fringilla leo felis eget mi. Aliquam vel molestie erat. Maecenas consectetur gravida tempor. Sed ante nisl, tincidunt quis pellentesque vulputate, suscipit vel mi. Sed varius tincidunt metus sit amet efficitur. Curabitur nec gravida sapien.</p>
-    </div>
-      <script src="./lib/d3.js"></script>
+      Quisque mattis venenatis nisi, eget cursus nibh bibendum et. Nullam ornare ligula eget tellus iaculis, in euismod velit convallis. Praesent ornare, libero quis vehicula tincidundt, lorem tellus lacinia nisi, et fringilla leo felis eget mi. Aliquam vel molestie erat. Maecenas consectetur gravida tempor. Sed ante nisl, tincidunt quis pellentesque vulputate, suscipit vel mi. Sed varius tincidunt metus sit amet efficitur. Curabitur nec gravida sapien.</p>
+      </section>
+    <script src="./lib/d3.js"></script>
     <script src="scatter.js"></script>
   </body>
 </html>

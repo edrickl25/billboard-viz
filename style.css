@@ -3,7 +3,11 @@ body {
   font-size: 16px;
   padding: 1em;
 }
-
+section{
+  padding:5px;
+  padding-left:20px;
+  padding-right:100px;
+}
 h1 {
   font-family: "Righteous", sans-serif;
   font-size: 3em;
@@ -12,7 +16,7 @@ h1 {
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.4em;
   margin: 0.25em 0;
 }
 
@@ -22,4 +26,21 @@ p {
 
 article {
   background-color: #dc29c4;
+  font-family: "Gotham", sans-serif;
+}
+
+.containerclass {
+  margin: 0 0%;
+  position: relative;
+}
+
+#container .legend {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border:3px solid black;
+  font-size:14px;
+  font-weight:bold;
+  padding-left: 15px;
+  padding-right: 15px;
 }
