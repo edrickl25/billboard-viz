@@ -120,6 +120,10 @@ svg = d3.select("#container")
     tooltip = d3.select("body")
     .append("div")
     .attr("class","tooltip")
+    .style("background","red")
+    .style("padding","6px")
+    .style("font-family","Quantico")
+    .style("border-radius","10px")
     .style("z-index","10")
     .style("position","absolute") 
     .style("visibility","hidden")
@@ -158,7 +162,7 @@ function draw() {
         // add tooltip code for mouseover
         .on("mouseover", function(event,d,i) {
             return tooltip
-            .html(`<div>${d.artist} - ${d.song} <br>Debut Position:${d.debut_position} <br> Weeks on Chart: ${d.weeks_on_chart}<br> Peak Position: ${d.peak_position}</div>`)
+            .html(`<div>${d.artist} - ${d.song} (${d.year}) <br>Debut Position:${d.debut_position} <br> Weeks on Chart: ${d.weeks_on_chart}<br> Peak Position: ${d.peak_position}</div>`)
             .style("visibility","visible");
         })
         .on("mousemove", function(event) {
