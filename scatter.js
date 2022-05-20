@@ -116,9 +116,9 @@ console.log(state.selectedGenre)
     .attr("transform", `translate(${margin.left},${0})`)
     .call(yAxis)
 
-  xTime = d3.time.scale()
+/*   xTime = d3.time.scale()
     .range([0,width]);
-
+ */
 
 
 // add tooltip general def
