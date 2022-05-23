@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <title>Listening through Y2K Trends</title>
     <h1 style="text-align: center">Listening through Y2K Trends</h1>
+<!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/ SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +14,60 @@
 
   <body style="background-color: #d248be">
     <section style="background-color: #4299de">
-      <h2>Comparing Debut Positions and Longevity of the Songs from our Childhood</h2>
-      <h3>Goal: I’m visualizing the Billboard Hot 100 data of the 2000s, while looking at the songs that maintained the most longevity and the average debut positions of the songs. I want to show what songs or trends were popular throughout the decade I grew up in, in terms of genre, artist, or style. My goal is to paint a picture of what the decade sounded like musically and if those sounds or trends might have changed over the years.</h3>
-      <label for="dropdown">Genre</label>
+      <h1 style="font-size: 30px">Examining Virality and Longevity of the Songs from our Childhood</h1>
+
+      <h3>
+        The Billboard Hot 100 is the music industry standard record chart in the United States for songs, published weekly by Billboard magazine. Chart rankings are based on music sales, radio play, and online streaming in the United States. The songs appearing on the weekly chart are deemed as the biggest songs in the country at that time.
+      </h3>
+      <h4>
+        Goal: I’m visualizing the Billboard Hot 100 data of the 2000s, while looking at the songs that maintained the most longevity and the average debut positions of the songs. I want to show what songs or trends were popular throughout the decade I grew up in, in terms of genre, artist, or style. My goal is to paint a picture of what the decade sounded like musically and if those sounds or trends might have changed over the years.
+      </h4>
+
+    </section>
+
+ 
+    <!-- (X) fix scattter tooltip
+        (X) make axis labels
+        (X) fix line chart
+        {X} titles
+        4) billboard writing
+        5) reflection  -->
+
+    <section style="background-color: #F46D25;" font-family="Verdana">
+      <h3 style="text-align:center">
+        Explanation of Billboard tracking
+      </h3>
+      <h3 style="font-size:medium">
+        ⇨ Read this section first to understand the rest of the visualizations</h3>
+      <h4>How does Billboard tabulate the charts?</h4>
+      <p>
+        Billboard and SoundScan (a company that handles and monitors the marketing and consumption of music) use a formula that tracks radio play and song sales to give each song a specific number of points each week. Being closer to #1 on the chart means the formula calculated a higher amount of consumption through radio or sales.
+        
+        During the 2000s, one thing to note is that on Feb. 12, 2005, the Hot 100 began incorporating digital sales data, reflecting the rise of iTunes, among other online retailers. The formula then started counting digital download sales with the traditional format of physical music sales.
+      </p>
+      <h4>
+        What do these variables mean?
+      </h4>
+      <p>
+        "Debut position" means what position on the chart, from 1-100, that the song initially appeared. "Weeks on Chart", or longevity, represents how many weeks the song appeared on the chart, from its first week to the very last week. "Peak positions" are also a common Billboard variable, but I will not be visualizing these for the purposes of this project. All songs used on the site have peaked in the top 40 of the chart.
+      </p>
+      <h4>
+        What do these variables tell us about music trends then?
+      </h4>
+      <p>
+        When a song is first released, on that very first week, if there is a huge marketing push or viral buzz around the song, it might have a high debut position due to a high amount of first-week sales or radio play. Songs with high debut positions generally represent virality and big cultural moments in music. Additionally, songs with a high amount of weeks on the chart have stood the test of time and tend to be the more "memorable" or "well-known" songs, across all demographics (that especially includes what was very popular amongst the older generation of music listeners, which is often overlooked in terms of what people remember as being popular! This may make more sense when you look at which songs had the most longevity). Songs with higher longevity tend to be propelled by radio as well, since radio generally plays specific for a very long time before removing them from their radio rotation.
+      </p>      
+      <h4>
+        Why is there a huge trend of songs around 20 weeks?
+      </h4>
+       <p>
+         Billboard has a policy on the charts called "recurrence" where the songs that were deemed to be "on their way out" of popularity and charts were removed. The rule says that songs that have been around for more than 20 weeks and are below #50 on the charts will go "recurrent" and be removed. The policy was implemented in 1991 with the advise of SoundScan, a company that handled the market around popular music in terms of surveying radio DJs and retailers, and they collectively determined 20 weeks to be a general turning point for when songs were less in demand. Therefore, many songs are capped off at 20 weeks since they naturally fall below #50 by then.
+        </p>
+      </section>
+
+    <section>
+      <h4 style="text-align:center">Comparing Debut Position and Longevity of 2000s Hits</h4>
+      <label for="dropdown">Filter by Genre</label>
       <select id="dropdown"></select>
       <div id="container" class="containerclass">
         <div class="legend">
@@ -23,20 +75,58 @@
             Dots on the right = more longevity on the charts</p>
         </div>
       </div>
-    </section>
-
-
-    <section style="background-color: #F46D25;" font-family="Verdana">
-      <h3>Explanation of Billboard tracking</h3>
-      <h4>Feb. 12, 2005: The Hot 100 begins incorporating digital sales data, reflecting the rise of iTunes, among other online retailers; the Digital Song Sales chart begins ranking the top-selling downloads of the week.</h4>
-      <h4>Why is there a huge trend of songs around 20 weeks?</h4>
-       <p>Recurrence is a chart policy implemented in 1991 with the advent of SoundScan in the Hot 100, where older songs charting for a certain amount of time are automatically kicked out the chart should they chart below or at a certain position. The logic behind this new rule coming in with the SoundScan policy changes is that because SoundScan accurately reflects how long a song lingers around in the market (during the survey era, DJs and retailers filling out surveys were more inclined to entirely remove songs that were deemed to be "on their way out", causing songs to fall fast off the charts), Billboard wanted to keep the Hot 100 fresh and constantly representing new, breakout talent. With this came the first Hot 100 recurrence rule: should a song be at least 20 weeks old and chart below #50, it will be removed from the charts.</p>
-    <h4></h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, leo ut consectetur sagittis, massa augue lobortis augue, vel tristique ligula risus quis dui. Praesent et sagittis enim, sed bibendum erat. Sed luctus volutpat massa at accumsan. Donec id consequat tellus. Fusce eleifend id velit sed pharetra. Mauris volutpat dolor sed convallis maximus. Duis sed metus eget risus laoreet convallis. Cras vel sodales arcu. Phasellus pharetra dui quis dictum rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum risus elit, congue mattis sapien ultrices et. Morbi iaculis, arcu et ultricies bibendum, est tellus interdum tortor, et aliquam leo arcu a lacus. Nulla eu euismod magna, at imperdiet odio. In blandit diam libero, ac finibus metus accumsan facilisis. Etiam mattis, magna nec pulvinar hendrerit, mauris libero eleifend dui, at elementum elit mauris sit amet diam. Phasellus facilisis quam vitae massa tincidunt, rhoncus volutpat magna convallis.
-
-      Quisque mattis venenatis nisi, eget cursus nibh bibendum et. Nullam ornare ligula eget tellus iaculis, in euismod velit convallis. Praesent ornare, libero quis vehicula tincidundt, lorem tellus lacinia nisi, et fringilla leo felis eget mi. Aliquam vel molestie erat. Maecenas consectetur gravida tempor. Sed ante nisl, tincidunt quis pellentesque vulputate, suscipit vel mi. Sed varius tincidunt metus sit amet efficitur. Curabitur nec gravida sapien.</p>
+      <p style="font-size:28px">
+        ⇨ As mentioned in the Billboard tracking section, higher debuts generally represent virality and big cultural moments in music. There is a cluster of extremely high debuts that had low longevity, and a lot of them were from American Idol winners who had huge overnight hits due to winning the competition (e.g., Inside Your Heaven by Carrie Underwood, This is the Night by Clay Aiken).
+      </p>
+      <p style="font-size:28px">
+        ⇨ As mentioned in the same section, songs with higher longevity tend to be propelled by long lifespans of radio play. All of the songs with the longest amount of weeks on the chart were huge radio hits and will most likely sound familiar to anyone that grew up listening to the radio. Furthermore, the biggest demographic of radio listeners has always been adults over 30, and this is even reflected (generally) in these songs, since they're nearly all deemed "adult contemporary" songs (e.g., I'm Yours by Jason Mraz, How to Save A Life by The Fray).
+      </p>
+    </section>  
+      <section style="background-color: #4299de">
+        <div id="line">
+          <div id="container" class="containerclass">
+            <div class="legend">
+              <svg>
+                <text x="50" y="60" style="text-anchor: start; align-items: middle; 
+                font-size: 30px; fill: black;">Pop</text>
+                <text x="50" y="110" style="text-anchor: start; align-items: middle; 
+                font-size: 30px; fill: black;">Hip-hop</text>          
+                <circle cx="39" cy="50" alignment-baseline="middle" r="6" style="fill: #F46D25;"></circle>
+                <circle cx="39" cy="100" alignment-baseline="middle" r="6" style="fill: #e33056;"></circle></svg>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:28px" style="font-weight:500">
+          ⇨ I decided to compare average debut positions by year between the two most popular genres of the era, pop and hip-hop. The latter was mostly popular on digital mediums, while the former was popular across all mediums.
+        </p>
+        <p style="font-size:28px" style="font-weight:500">
+          ⇨ If we use the statistics around pop music as a benchmark for how music performed this decade, we can see that hip-hop quickly started making a bigger impact on music culture, starting at an average debut position of around 82 to around 57, nearly catching up with pop. Since hip-hop is more popular on digital mediums, it does make sense that it started performing much better in the latter half of the decade as iTunes became more popular. YouTube also helped create more viral moments and that reflects in higher debut positions, too.
+        </p>
       </section>
+      <section style="background-color: #F46D25;" font-family="Verdana">
+        <h4>The below visualization was a bubble timeline that would have shown how the biggest songs lasted throughout the years. It was ultimately a bit too ambitious for what I was capable of, programming-wise, but ideally it would have shown information on the songs, just like it did on the scatter plot. The bubbles also ended up being slightly misaligned which I tried to fix as close as possible. For now, I will list the songs this would have shown instead, which are all the songs that charted for over 52 weeks on the Hot 100: </h4>
+        <ul>
+          <li>3 Doors Down - Kryptonite (07-Apr-2001) (53 weeks)</li>
+          <li>Faith Hill - The Way You Love Me (26-May-2001) (56 weeks)</li>
+          <li>Lifehouse - Hanging By A Moment (16-Feb-2002) (54 weeks)</li>
+          <li>Train - Drops of Jupiter (16-Mar-2002) (53 weeks)</li>
+          <li>Matchbox Twenty - Unwell (27-Mar-2004) (54 weeks)</li>
+          <li>Lifehouse - You And Me (22-Apr-2006) (62 weeks)</li>
+          <li>The Fray - How To Save A Life (02-Jun-2007) (58 weeks)</li>
+          <li>Carrie Underwood - Before He Cheats (01-Dec-2007) (64 weeks)</li>
+          <li>Jason Mraz - I'm Yours (10-Oct-2009) (76 weeks)</li>
+        </ul>
+      </section>
+    <section style="padding-left: 30px">
+        <div id="chart"></div>
+      </section>
+    <section class="credits">
+      Data retrieved from <a href="https://data.world/kcmillersean/billboard-hot-100-1958-2017/workspace/query?filename=Hot+Stuff.csv&newQueryType=SQL&selectedTable=hot_stuff_2&tempId=1650232608177">@kcmillersean on Data.world</a><br>©Edrick Leong - Graduate Center 2022 - All Rights Reserved
+    </section>
     <script src="./lib/d3.js"></script>
-    <script src="scatter.js"></script>
+    <script src="scatter.js" type="module"></script>
+    <script src="circlewdata.js" type="module"></script>
+    <script src="multiline.js" type="module"></script>
   </body>
+
 </html>

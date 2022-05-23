@@ -16,7 +16,7 @@
 /* CONSTANTS AND GLOBALS */
 const width = window.innerWidth * .8,
   height = window.innerHeight * .8,
-  margin = {top: 10, bottom: 30, left: 40, right: 10},
+  margin = {top: 30, bottom: 50, left: 50, right: 40},
   radius = 5;
 
 // these variables allow us to access anything we manipulate in init() but need access to in draw().
@@ -120,15 +120,38 @@ console.log(state.selectedGenre)
     .range([0,width]);
  */
 
+// creating title and labels
+
+/*   svg.append("text")      
+    .attr("x",  width / 2 )
+    .attr("y",  margin.top-45)
+    .text("Comparing Debut Position and Longevity of 2000s Hits"); */
+
+  svg.append("text")
+    .attr("class","xLabel")
+    .attr("y",height-10)
+    .attr("x",width/2)
+    .attr("fill","navy")
+    .text("Weeks on Chart (longevity)")
+
+  svg.append("text")
+    .attr("class","yLabel")
+    .attr("transform","rotate(-90)")
+    .attr("y", 20)
+    .attr("x", 0-(height / 2))
+    .text("Debut Position")
 
 // add tooltip general def
 
     tooltip = d3.select("body")
     .append("div")
     .attr("class","tooltip")
-    .style("background","red")
+    .style("background","#d248be")
     .style("padding","6px")
     .style("font-family","Quantico")
+    .style("border-style","solid")
+    .style("border-width","3px")
+    .style("border-color","white")
     .style("border-radius","10px")
     .style("z-index","10")
     .style("position","absolute") 
