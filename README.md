@@ -20,7 +20,9 @@ The inspiration for this project came from my long-time interest in Billboard Ho
 * [Behavior of Billboard Songs Over Time (my previous project that served as inspiration and reference)](https://public.tableau.com/views/BehaviorofBillboardSongsOverTimestory/finaldashboard?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 
-A lot of my knowledge of the charts came from reading many articles detailing Billboard's history and SoundScan tracking. I also wanted to recreate a 2000s feel for the site, so I got inspiration from many website templates for MySpace and even the website from iCarly, which was perfect for inspiring the round border radius on all my paragraphs. The colors were very Nickelodeon-inspired, as that's what I associate with the 2000s, and the Juicebox Interactive blog was helpful with the hex codes to perfectly capture that nostalgic essence. I was and still am a complete amateur when it comes to programming, so I owe a ton to my professor Rachel Daniell, who guided me through the project stages and all kinds of other d3 fundamentals that I needed to learn to get here.
+A lot of my knowledge of the charts came from reading many articles detailing Billboard's history and SoundScan tracking. I also wanted to recreate a 2000s feel for the site, so I got inspiration from many website templates for MySpace and even the website from iCarly, which was perfect for inspiring the round border radius on all my paragraphs. The colors were very Nickelodeon-inspired, as that's what I associate with the 2000s, and the Juicebox Interactive blog was helpful with the hex codes to perfectly capture that nostalgic essence. I was and still am a complete amateur when it comes to programming, so I owe a ton to my professor Rachel Daniell, who guided me through the project stages and all kinds of other d3 fundamentals that I needed to learn to get here.)
+
+[Slides documenting my brainstorming process and previous iteration](https://docs.google.com/presentation/d/1vSA9ybCHePV5AvuMENZGklK-TUAFA-nBYH4cdU8TkLU/edit?usp=sharing)
 
 ---------------------------------------------
 
